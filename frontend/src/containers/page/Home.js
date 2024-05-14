@@ -8,7 +8,9 @@ let Home = () => {
     let [todolistCompleted,setTodolistCompleted]=useState([]);
     let [activePage,setPage]= useState('all');
     let addTodo = async (item)=>{
-        let cloneItem={value:item,checked:false} 
+        // tao clone item moi
+        let cloneItem={value:item,checked:false}
+        // gui du lieu toi data
         let resData =await addTodoData(cloneItem)
         cloneItem._id=resData.value;
         let clone = [cloneItem,...todolist];
